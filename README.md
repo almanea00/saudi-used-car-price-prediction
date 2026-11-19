@@ -31,12 +31,12 @@ Used cars are a big consumer market in Saudi Arabia, and a large part of it runs
 
 ```mermaid
 flowchart LR
-    A["🚗 Seller posts a car<br/>Haraj · Syarah · showroom"] --> B{"Is the price fair?"}
-    B -- "No benchmark today" --> C["😟 Overpaying, haggling,<br/>wasted visits, scams"]
-    B -- "With this model" --> D["✅ Instant fair-price estimate"]
-    D --> E["🧑 Buyer knows what to pay"]
-    D --> F["🏷️ Seller prices realistically"]
-    D --> G["🏦 Bank or insurer values the car"]
+    A["Seller posts a car<br/>Haraj · Syarah · showroom"] --> B{"Is the price fair?"}
+    B -- "No benchmark today" --> C["Overpaying, haggling,<br/>wasted visits, scams"]
+    B -- "With this model" --> D["Instant fair-price estimate"]
+    D --> E["Buyer knows what to pay"]
+    D --> F["Seller prices realistically"]
+    D --> G["Bank or insurer values the car"]
 ```
 
 | Problem | Who it hurts |
@@ -53,13 +53,13 @@ A data-driven estimate gives every party a **fair-value benchmark in seconds**.
 
 ```mermaid
 flowchart TD
-    M(("🧠 Price<br/>model"))
-    M --> A["🛒 Marketplaces<br/>Haraj · Syarah<br/>fair-price badge, price suggestion, deal flags"]
-    M --> B["🏪 Dealers & showrooms<br/>consistent stock pricing,<br/>smarter trade-in offers"]
-    M --> C["🚛 Fleet & rental companies<br/>value cars at disposal,<br/>time the sale"]
-    M --> D["🏦 Banks & auto finance<br/>collateral and loan-to-value checks"]
-    M --> E["🛡️ Insurers<br/>faster, consistent claim valuations"]
-    M --> F["👤 Buyers & sellers<br/>a neutral benchmark<br/>before negotiating"]
+    M(("Price<br/>model"))
+    M --> A["Marketplaces<br/>Haraj · Syarah<br/>fair-price badge, price suggestion, deal flags"]
+    M --> B["Dealers & showrooms<br/>consistent stock pricing,<br/>smarter trade-in offers"]
+    M --> C["Fleet & rental companies<br/>value cars at disposal,<br/>time the sale"]
+    M --> D["Banks & auto finance<br/>collateral and loan-to-value checks"]
+    M --> E["Insurers<br/>faster, consistent claim valuations"]
+    M --> F["Buyers & sellers<br/>a neutral benchmark<br/>before negotiating"]
 ```
 
 It also fits the direction of **Vision 2030**: digital transformation, more transparent consumer markets and data-driven decisions in everyday commerce.
@@ -68,8 +68,8 @@ It also fits the direction of **Vision 2030**: digital transformation, more tran
 
 ```mermaid
 flowchart LR
-    A["📥 Kaggle<br/>dataset"] --> B["🔍 Explore"] --> C["🧹 Clean +<br/>Age feature"] --> D["✂️ Split<br/>60 / 20 / 20"]
-    D --> E["📏 Baselines<br/>Linear · Forest · XGBoost"] --> F["🎯 Optuna tuning<br/>on validation set"] --> G["🧪 One final<br/>test-set check"] --> H["📊 Feature<br/>importance"]
+    A["Kaggle<br/>dataset"] --> B["Explore"] --> C["Clean +<br/>Age feature"] --> D["Split<br/>60 / 20 / 20"]
+    D --> E["Baselines<br/>Linear · Forest · XGBoost"] --> F["Optuna tuning<br/>on validation set"] --> G["One final<br/>test-set check"] --> H["Feature<br/>importance"]
 ```
 
 - **Data:** [Saudi Arabia Used Cars Dataset](https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset) on Kaggle (cleaned English version). The notebook downloads it automatically, so no data is stored in this repo.
