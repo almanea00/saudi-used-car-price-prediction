@@ -99,7 +99,7 @@ The easiest way is **Google Colab**: open the notebook and choose *Runtime > Run
 To run locally:
 
 ```bash
-git clone https://github.com/<your-username>/saudi-used-car-price-prediction.git
+git clone https://github.com/almanea00/saudi-used-car-price-prediction.git
 cd saudi-used-car-price-prediction
 pip install -r requirements.txt
 jupyter notebook saudi_used_car_price_prediction.ipynb
