@@ -19,7 +19,7 @@
 [![Forks](https://img.shields.io/github/forks/almanea00/saudi-used-car-price-prediction?style=for-the-badge&logo=github)](https://github.com/almanea00/saudi-used-car-price-prediction/forks)
 ![Last commit](https://img.shields.io/github/last-commit/almanea00/saudi-used-car-price-prediction?style=for-the-badge)
 
-[**The Problem**](#the-problem) · [**Business Value**](#why-this-matters-for-saudi-businesses) · [**Method**](#how-it-works) · [**Results**](#results) · [**Limitations**](#limitations) · [**Run It**](#run-it)
+[**The Problem**](#the-problem) · [**Business Value**](#why-this-matters-for-saudi-businesses) · [**Method**](#how-it-works) · [**Results**](#results) · [**Next Steps**](#next-steps) · [**Run It**](#run-it)
 
 </div>
 
@@ -94,7 +94,7 @@ flowchart LR
 
 ## Results
 
-### Every step beats the one before it
+### Each step improves on the last
 
 <p align="center">
   <img src="images/08_model_comparison.png" alt="Model comparison on the test set" width="95%">
@@ -102,19 +102,19 @@ flowchart LR
 
 *Left: higher R² is better. Right: lower error is better. The tuned XGBoost is the best on both.*
 
-### Why we tune: the baselines memorize
+### Tuning the model
 
 <p align="center">
   <img src="images/05_train_vs_test.png" alt="Train versus test R2" width="70%">
 </p>
 
-*Random Forest and XGBoost almost perfectly fit the training data (blue) but do much worse on unseen cars (orange). That gap is overfitting, which is why we tune on a separate validation set.*
+*Out of the box, Random Forest and XGBoost score higher on the training data (blue) than on unseen cars (orange). That is why the final model is tuned on a separate validation set.*
 
 <p align="center">
   <img src="images/06_baseline_vs_tuned.png" alt="Baseline versus tuned XGBoost" width="70%">
 </p>
 
-*Tuning lifts the score on unseen cars (green), but the tuned model still fits the training data very closely (blue), so some overfitting remains. More data or cross-validation would be the next step.*
+*Tuning lifts the score on unseen cars (green) above the baseline.*
 
 ### How close are the predictions?
 
@@ -132,27 +132,23 @@ flowchart LR
 
 *Luxury and exotic names (LX, G-Class, Mercedes, Rolls-Royce, Land Rover, Porsche 911, Aston Martin) and a "Full" options level dominate. The Saudi market prices heavily on brand and trim, which matches how people actually shop.*
 
-## Limitations
+## Next Steps
 
-- **Asking prices, not sale prices.** The model predicts what sellers ask, not what the car finally sold for.
-- **Negotiable listings are excluded**, so the model only learns from fixed-price ads.
-- **A snapshot in time.** There are no listing dates, so it cannot track market trends and needs retraining as prices move.
-- **Cheap cars suffer most.** An error of around 15k SAR is a big share of a low price. Predicting `log(Price)` would be fairer.
-- **No condition data.** Accident history, service records and body condition are missing.
+This is a strong first version, and there is a clear path to make it better:
 
-**Next steps:** log-transform the target, add cross-validation, try CatBoost and LightGBM, add SHAP explanations, and wrap the model in a small web app or API that a marketplace could call.
+- **Real sale prices.** Train on final sale prices, not only asking prices, to get closer to true market value.
+- **Include negotiable listings.** Model them separately so the full market is covered.
+- **Add listing dates.** This would let the model follow price trends over time.
+- **Add condition data.** Accident history, service records and body condition matter to real buyers.
+- **Fairer accuracy for cheap cars.** Predicting `log(Price)` would give a more even error across price ranges.
+- **Tighter generalization.** Cross-validation and stronger regularization to narrow the gap between training and test scores, plus CatBoost and LightGBM for comparison.
+- **Explainability and deployment.** SHAP explanations, and a small web app or API a marketplace could call.
 
 ## Run It
 
 ### In Google Colab (easiest)
 
 [![Open In Colab](https://img.shields.io/badge/Open_in_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/almanea00/saudi-used-car-price-prediction/blob/main/saudi_used_car_price_prediction.ipynb)
-
-```
-https://colab.research.google.com/github/almanea00/saudi-used-car-price-prediction/blob/main/saudi_used_car_price_prediction.ipynb
-```
-
-Open the link and choose **Runtime → Run all**. The dataset downloads from Kaggle automatically.
 
 ### Locally
 
