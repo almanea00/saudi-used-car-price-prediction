@@ -133,6 +133,16 @@ flowchart LR
 
 *Luxury and exotic names (LX, G-Class, Mercedes, Bentley, Rolls-Royce, Land Rover, Porsche 911, Aston Martin) and a "Full" options level dominate. The Saudi market prices heavily on brand and trim, which matches how people actually shop.*
 
+### Example: one car, actual vs predicted
+
+The notebook ends with a worked example. Take a Nissan Maxima from the unseen test set: it was listed at **63,500 SAR** and the model predicted **68,389 SAR**, a gap of about 8%. The chart shows ten random test cars the same way.
+
+<p align="center">
+  <img src="images/10_example_cars.png" alt="Actual versus predicted price for ten random test cars" width="85%">
+</p>
+
+*Blue is the real asking price and orange is the model's prediction. Many cars are very close, while a few expensive ones are further off.*
+
 ## Next Steps
 
 This is a strong first version, and there is a clear path to make it better:
