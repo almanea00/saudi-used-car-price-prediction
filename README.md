@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚗 Saudi Arabia Used Car Price Prediction
+# Saudi Arabia Used Car Price Prediction
 
 **Predict the fair asking price (SAR) of a used car in the Kingdom with XGBoost and Optuna.**
 
@@ -19,13 +19,13 @@
 [![Forks](https://img.shields.io/github/forks/almanea00/saudi-used-car-price-prediction?style=for-the-badge&logo=github)](https://github.com/almanea00/saudi-used-car-price-prediction/forks)
 ![Last commit](https://img.shields.io/github/last-commit/almanea00/saudi-used-car-price-prediction?style=for-the-badge)
 
-[**The Problem**](#-the-problem) · [**Business Value**](#-why-this-matters-for-saudi-businesses) · [**Method**](#-how-it-works) · [**Results**](#-results) · [**Limitations**](#-limitations) · [**Run It**](#-run-it)
+[**The Problem**](#the-problem) · [**Business Value**](#why-this-matters-for-saudi-businesses) · [**Method**](#how-it-works) · [**Results**](#results) · [**Limitations**](#limitations) · [**Run It**](#run-it)
 
 </div>
 
 ---
 
-## 🧭 The Problem
+## The Problem
 
 Used cars are a big consumer market in Saudi Arabia, and a large part of it runs through classifieds such as **Haraj**, dealer showrooms, and newer marketplaces such as **Syarah**. On these channels the price is whatever the seller types in, and nobody has a neutral benchmark.
 
@@ -47,7 +47,7 @@ flowchart LR
 | **Gut-feeling dealer pricing.** Showrooms price on experience, so margins and stock turnover are unpredictable. | Dealers, fleet owners |
 | **Manual valuation.** Banks, leasing companies and insurers often rely on hand appraisals. | Lenders, insurers, claims teams |
 
-## 💼 Why This Matters for Saudi Businesses
+## Why This Matters for Saudi Businesses
 
 A data-driven estimate gives every party a **fair-value benchmark in seconds**.
 
@@ -64,7 +64,7 @@ flowchart TD
 
 It also fits the direction of **Vision 2030**: digital transformation, more transparent consumer markets and data-driven decisions in everyday commerce.
 
-## ⚙️ How It Works
+## How It Works
 
 ```mermaid
 flowchart LR
@@ -78,7 +78,7 @@ flowchart LR
 - **No leakage:** tuning uses only the validation set. The test set is touched once, at the end.
 - **Regularized XGBoost:** L1/L2 penalties are part of the search, to help limit overfitting.
 
-### 🔍 What the data looks like
+### What the data looks like
 
 <p align="center">
   <img src="images/03_price_by_brand.png" alt="Price distribution by brand" width="85%">
@@ -92,7 +92,7 @@ flowchart LR
 
 *Most cars are cheap and a few are very expensive, so prices are heavily skewed. The log scale on the right makes the shape easier to read.*
 
-## 📊 Results
+## Results
 
 ### Every step beats the one before it
 
@@ -132,7 +132,7 @@ flowchart LR
 
 *Luxury and exotic names (LX, G-Class, Mercedes, Rolls-Royce, Land Rover, Porsche 911, Aston Martin) and a "Full" options level dominate. The Saudi market prices heavily on brand and trim, which matches how people actually shop.*
 
-## ⚠️ Limitations
+## Limitations
 
 - **Asking prices, not sale prices.** The model predicts what sellers ask, not what the car finally sold for.
 - **Negotiable listings are excluded**, so the model only learns from fixed-price ads.
@@ -142,9 +142,9 @@ flowchart LR
 
 **Next steps:** log-transform the target, add cross-validation, try CatBoost and LightGBM, add SHAP explanations, and wrap the model in a small web app or API that a marketplace could call.
 
-## 🚀 Run It
+## Run It
 
-### ▶️ In Google Colab (easiest)
+### In Google Colab (easiest)
 
 [![Open In Colab](https://img.shields.io/badge/Open_in_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/almanea00/saudi-used-car-price-prediction/blob/main/saudi_used_car_price_prediction.ipynb)
 
@@ -154,7 +154,7 @@ https://colab.research.google.com/github/almanea00/saudi-used-car-price-predicti
 
 Open the link and choose **Runtime → Run all**. The dataset downloads from Kaggle automatically.
 
-### 💻 Locally
+### Locally
 
 ```bash
 git clone https://github.com/almanea00/saudi-used-car-price-prediction.git
@@ -165,6 +165,6 @@ jupyter notebook saudi_used_car_price_prediction.ipynb
 
 `kagglehub` may ask you to log in to Kaggle the first time it downloads the dataset.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 Dataset by [turkibintalib](https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset) on Kaggle. Built as a course project.
