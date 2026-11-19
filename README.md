@@ -69,14 +69,15 @@ It also fits the direction of **Vision 2030**: digital transformation, more tran
 ```mermaid
 flowchart LR
     A["Kaggle<br/>dataset"] --> B["Explore"] --> C["Clean +<br/>Age feature"] --> D["Split<br/>60 / 20 / 20"]
-    D --> E["Baselines<br/>Linear · Forest · XGBoost"] --> F["Optuna tuning<br/>on validation set"] --> G["One final<br/>test-set check"] --> H["Feature<br/>importance"]
+    D --> E["Baselines<br/>Linear · Forest · XGBoost"] --> F["Optuna tuning<br/>on validation set"] --> G["Refit on train + val,<br/>one final test check"] --> H["Feature<br/>importance"]
 ```
 
 - **Data:** [Saudi Arabia Used Cars Dataset](https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset) on Kaggle (cleaned English version). The notebook downloads it automatically, so no data is stored in this repo.
 - **Target:** the asking `Price` in SAR. Listings marked *Negotiable* have no usable price and are left out.
 - **Feature engineering:** `Year` becomes `Age`, so depreciation is easier for models to learn.
 - **No leakage:** tuning uses only the validation set. The test set is touched once, at the end.
-- **Regularized XGBoost:** L1/L2 penalties are part of the search, to help limit overfitting.
+- **Regularized XGBoost:** the search includes `min_child_weight`, `gamma` and L1/L2 penalties, to help limit overfitting.
+- **Final model:** the best settings are refit on train + validation (80% of the data) before the single test-set check. Tuning alone reaches about 0.83 test R², and the extra data brings it to about 0.85.
 
 ### What the data looks like
 
