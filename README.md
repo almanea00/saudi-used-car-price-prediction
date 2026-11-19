@@ -1,5 +1,7 @@
 # Saudi Arabia Used Car Price Prediction
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/almanea00/saudi-used-car-price-prediction/blob/main/saudi_used_car_price_prediction.ipynb)
+
 An end-to-end machine learning project that predicts the **asking price (in SAR)** of used cars in Saudi Arabia from listing details such as brand, model, trim level, age, mileage and engine size. It covers data cleaning, exploratory analysis, feature engineering, baseline models, hyperparameter tuning with **Optuna**, and an honest evaluation on a held-out test set.
 
 > Built as a course project. The full workflow lives in the notebook: [`saudi_used_car_price_prediction.ipynb`](saudi_used_car_price_prediction.ipynb).
