@@ -101,7 +101,7 @@ flowchart LR
   <img src="images/08_model_comparison.png" alt="Model comparison on the test set" width="95%">
 </p>
 
-*Left: higher R² is better. Right: lower error is better. The tuned XGBoost is the best on both.*
+*Left: higher R² is better. Right: lower error is better. The last bar, the final tuned XGBoost (retrained on 80% of the data), is the best on both.*
 
 ### Tuning the model
 
@@ -131,7 +131,7 @@ flowchart LR
   <img src="images/09_feature_importance.png" alt="Top 20 feature importances" width="75%">
 </p>
 
-*Luxury and exotic names (LX, G-Class, Mercedes, Rolls-Royce, Land Rover, Porsche 911, Aston Martin) and a "Full" options level dominate. The Saudi market prices heavily on brand and trim, which matches how people actually shop.*
+*Luxury and exotic names (LX, G-Class, Mercedes, Bentley, Rolls-Royce, Land Rover, Porsche 911, Aston Martin) and a "Full" options level dominate. The Saudi market prices heavily on brand and trim, which matches how people actually shop.*
 
 ## Next Steps
 
