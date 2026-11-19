@@ -47,7 +47,7 @@ flowchart LR
 | **Gut-feeling dealer pricing.** Showrooms price on experience, so margins and stock turnover are unpredictable. | Dealers, fleet owners |
 | **Manual valuation.** Banks, leasing companies and insurers often rely on hand appraisals. | Lenders, insurers, claims teams |
 
-## 🇸🇦 Why This Matters for Saudi Businesses
+## 💼 Why This Matters for Saudi Businesses
 
 A data-driven estimate gives every party a **fair-value benchmark in seconds**.
 
