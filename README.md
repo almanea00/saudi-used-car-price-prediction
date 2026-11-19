@@ -13,8 +13,8 @@
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-![Test R2](https://img.shields.io/badge/Test_R%C2%B2-0.82-2ea44f?style=for-the-badge)
-![Average error](https://img.shields.io/badge/Average_error-15.4k_SAR-orange?style=for-the-badge)
+![Test R2](https://img.shields.io/badge/Test_R%C2%B2-0.85-2ea44f?style=for-the-badge)
+![Average error](https://img.shields.io/badge/Average_error-14.6k_SAR-orange?style=for-the-badge)
 [![Stars](https://img.shields.io/github/stars/almanea00/saudi-used-car-price-prediction?style=for-the-badge&logo=github)](https://github.com/almanea00/saudi-used-car-price-prediction/stargazers)
 [![Forks](https://img.shields.io/github/forks/almanea00/saudi-used-car-price-prediction?style=for-the-badge&logo=github)](https://github.com/almanea00/saudi-used-car-price-prediction/forks)
 ![Last commit](https://img.shields.io/github/last-commit/almanea00/saudi-used-car-price-prediction?style=for-the-badge)
